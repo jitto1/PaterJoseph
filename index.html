@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #d8d8d8;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        .title-bar {
+            text-align: center;
+            padding: 2rem 1rem;
+            background-color: #c0c0c0;
+        }
+
+        .title-bar img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .title-bar h1 {
+            margin: 1rem 0 0.5rem;
+        }
+
+        .title-bar p {
+            color: #666;
+        }
+
+        .main {
+            padding: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .main section {
+            margin-bottom: 2rem;
+        }
+
+        .main h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .appointment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .appointment-tile {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #f9f9f9;
+            transition: transform 0.3s ease;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .appointment-tile img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .appointment-tile img:hover {
+            transform: scale(1.1);
+        }
+
+        .appointment-tile p {
+            margin-top: 0.5rem;
+            color: #555;
+        }
+
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .education-entry {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            transition: transform 0.3s ease;
+        }
+
+        .education-entry:hover {
+            transform: scale(1.02);
+        }
+
+        .education-entry img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 1rem;
+        }
+
+        .education-entry .details {
+            flex: 1;
+        }
+
+        .education-entry .details h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .education-entry .details p {
+            margin: 0.5rem 0 0;
+            color: #555;
+        }
+
+
+        .work-entry {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            transition: transform 0.3s ease;
+        }
+
+        .work-entry:hover {
+            transform: scale(1.02);
+        }
+
+        .work-entry img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 1rem;
+        }
+
+        .work-entry .details {
+            flex: 1;
+        }
+
+        .work-entry .details h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .work-entry .details p {
+            margin: 0.5rem 0 0;
+            color: #555;
+        }
+
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            header nav {
+                margin-top: 1rem;
+            }
+
+            .title-bar img {
+                width: 100px;
+                height: 100px;
+            }
+            .education-entry {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .education-entry img {
+                margin-bottom: 1rem;
+            }
+            .work-entry {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .work-entry img {
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Pater Dr. Joseph Puthoor CST</div>
+        <nav>
+            <a href="#biodata">Biodata</a>
+            <a href="#education">Education</a>
+            <a href="#work">Ecclesiastical Studies</a>
+            <a href="#appointments">Appointments</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="title-bar">
+        <img src="./assets/images/propic.jpg" alt="Profile Picture">
+        <h1>Pater Dr. Joseph Puthoor CST</h1>
+        <h3>Projekt Koordinator</h3>
+        <p><strong>für Europa der St. Joseph Provinz Deutschland der Kongregation der hl. Theresa von Kinde Jesu
+    (Little Flower Congregation,CST-Patres)</strong></p>
+        <hr>
+
+        <p style="text-align: left;">Sehr geehrte Leserinnen und Leser,</p> 
+            <p style="text-align: left;">die Little Flower Congregation ist eine Priester-Kongregation, die im März 1931 in Mookkannur, Indien, von Pfr. Thomas Panat (1831-1897), später bekannt unter seinem Ordensnamen Pater Basilius CST, gegründet wurde. Die Leitlinie des Ordens ist der ,kleine Weg" der Schutzpatronin, der Heiligen Theresia von Lisieux. Nach dem Beispiel der Ordenspatronin sind alle Mitglieder der Gemeinschaft zu ununterbrochener Erfahrung der Liebe Gottes und zu selbstloser Hingabe aus reinem Vertrauen in Gott aufgerufen. <br> Pater Dr. theol. Joseph Puthoor CST, der Projekt Koordinator für Europa, ist ein katholischer Priester der St. Joseph Provinz Deutschland der Kongregation der hl. Theresa von Kinde Jesu (Little Flower Congregation, CST-Patres). Am 17. Mai 1996 legte er seine erste Profess ab und wurde Mitglied der Kongregation, und ebenso im Jahr 2002 seine ewige Profess. Er wurde am 03. Januar 2005 zum Priester geweiht. <br>Nach seiner Priesterweihe wurde er zum Leiter eines Bauwerkes, John Paul II Memorial College, Little Flower Ashram, Labbakkada, Kerala, in einem abgelegenen Dorf eingesetzt, wo viele arme und unprivilegierte Kinder der High Ranges des Bezirks Idukki, Kerala leben. Dieses Gebiet sollte als Chance für die soziale Aufwertung dienen, um den benachteiligten Schülern die Möglichkeit zur Ausbildung einer ganzheitlichen und wesentlichen Entwicklung anzubieten. Sie lernen ihr eigenes Leben zu gestalten und ihre Familie zu unterstützen, um auch ein menschenwürdiges Leben führen zu können. <br>Später wurde er in die Diözese Münster in Deutschland zum pastoralen Dienst eingesetzt. Nach dem fünfjährigen Pastoraldienst in Deutschland wurde er zum Lizentiat und zur Forschung in Theologie an das Päpstliche Theologische Institut Papst Johannes Paul II. für Ehe- und Familienwissenschaften an der Päpstlichen Lateranuniversität Città del Vaticano freigestellt und hat an derselben Universität im Familienpastoral zum Doktor der Theologie promoviert. Er schloss sein Studium 2020 ab. Nach seiner Promotion wurde er als Pastor an der St. Viktor Basilika Xanten in Deutschland eingesetzt. Derzeit ist er Pastor in der Pfarrgemeinde St. Dionysius Walsum im Bistum Münster. <br>Überall, wo wir als Little Flower Missionare tätig sind, geht es uns nicht nur um die Vermittlung des Christlichen Glaubens. Immer möchten wir auch die Lebensumstände der Menschen verbessern. Das ist unsere Herzensangelegenheit.</p>
+    </div>
+
+    <div class="main">
+        <section id="biodata">
+            <h2>Biodata</h2>
+            <p><strong>Name:</strong>Joseph Puthoor</p>
+            <p><strong>Home Address:</strong>St Joseph's Provicial House C.S.T. Fathers,Eruthamala P.O,Aluva, 683112, Kerala, India</p>
+            <p><strong>Work Address:</strong>Friedrich Str.24, 47179 Duisburg, Deutschland</p>
+            <p><strong>Parish:</strong>St Thomas Cathedral, Pala</p>
+            <p><strong>Dioces:</strong>Pala</p>
+            <p><strong>Date of Birth:</strong>05.09.1974</p>
+            <p><strong>Date of Confirmation:</strong>02.12.1984</p>
+            <p><strong>Date of Priestly Ordination:</strong>03.01.2005</p>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-entry">
+                <img src="./assets/images/stclg.jpg" alt="Institution">
+                <div class="details">
+                    <h3>St Thomas College</h3>
+                    <p>Pala</p>
+                    <p>1990-1992</p>
+                </div>
+            </div>
+            <div class="education-entry">
+                <img src="./assets/images/sthhs.jpg" alt="Institution">
+                <div class="details">
+                    <h3>St Thomas HS</h3>
+                    <p>Pala</p>
+                    <p>1987-1990</p>
+                </div>
+            </div>
+            <div class="education-entry">
+                <img src="./assets/images/bts.jpg" alt="Institution">
+                <div class="details">
+                    <h3>St Thomas BTS</h3>
+                    <p>Pala</p>
+                    <p>1984-1987</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="work">
+            <h2>Ecclesiastical Studies</h2>
+
+            <div class="work-entry">
+                <img src="./assets/images/laternal uni.jpg" alt="Institution">
+                <div class="details">
+                    <h3>Lateran University,Vatican</h3>
+                    <p>Rome</p>
+                    <p><strong>Doctrate in Sacred Theology</strong></p>
+                    <p>2015-2020</p>
+                </div>
+            </div>
+            <div class="work-entry">
+                <img src="./assets/images/laternal uni.jpg" alt="Institution">
+                <div class="details">
+                    <h3>Lateran University, Vatican</h3>
+                    <p>Rome</p>
+                    <p><strong>Licentiate in Sacred Theology</strong></p>
+                    <p>2012-2015</p>
+                </div>
+            </div>
+            <div class="work-entry">
+                <img src="./assets/images/andra.jpg" alt="Institution">
+                <div class="details">
+                    <h3>Vijnananilayam, Eluru, Andra Pradesh</h3>
+                    <p><strong>Bachelor in Sacred Theology</strong></p>
+                    <p>2001-2004</p>
+                </div>
+            </div>
+            <div class="work-entry">
+                <img src="./assets/images/boys town.jpg" alt="Institution">
+                <div class="details">
+                    <h3>Mar Mathew's Boys Town</h3>
+                    <p><strong>Pastoral Experience</strong></p>
+                    <p>Kozhippilly, Kerala, India</p>
+                    <p>2000-2001</p>
+                </div>
+            </div>
+            <div class="work-entry">
+                <img src="./assets/images/major.jpg" alt="Institution">
+                <div class="details">
+                    <h3>Little Flower Major Seminary</h3>
+                    <p>Bachelor in Philosophy</p>
+                    <p>Aluva, Kerala, India</p>
+                    <p>1996-1998</p>
+                </div>
+            </div>
+            <div class="work-entry">
+                <img src="./assets/images/novi.jpg" alt="Institution">
+                <div class="details">
+                    <h3>Vidhyabhavan</h3>
+                    <p>Banglore, India</p>
+                    <p>Novitiate</p>
+                    <p>1995-1996</p>
+                </div>
+            </div>
+            <div class="work-entry">
+                <img src="./assets/images/lfseminary.jpg" alt="Institution">
+                <div class="details">
+                    <h3>Little Flower Minor Seminary</h3>
+                    <p>Poovathode, Kerala, India</p>
+                    <p>1994-1995</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="appointments">
+            <h2>Appointments</h2>
+            <div class="appointment-grid">
+                <div class="appointment-tile">
+                    <img src="./assets/images/stdpw.jpg" alt="Appointment 1">
+                    <p><strong>St Dionysius Pfarrgemeinde walsum, Germany</strong></p>
+                    <p><i>Pastor</i></p>
+                    <p>01.03.2024- Ongoing</p>
+                </div>
+                <div class="appointment-tile">
+                    <img src="./assets/images/stvpx.jpg" alt="Appointment 2">
+                    <p><strong>St Viktor Probsteigemeinde Xanten, Germany</strong></p>
+                    <p><i>Pastor</i></p>
+                    <p>01.10.2020</p>
+                </div>
+                <div class="appointment-tile">
+                    <img src="./assets/images/rome.jpg" alt="Appointment 3">
+                    <p><strong>Rome, Italy</strong></p>
+                    <p><i>Higher Studies</i></p>
+                    <p>01.09.2012- 03.06.2020</p>
+                </div>
+                <div class="appointment-tile">
+                    <img src="./assets/images/stml.jpg" alt="Appointment 3">
+                    <p><strong>St Marien Luenen, Germany</strong></p>
+                    <p><i>Vicarius - cooperatur</i></p>
+                    <p>18.05.2007- 31.08.2012</p>
+                </div>
+                <div class="appointment-tile">
+                    <img src="./assets/images/labbakada.jpg" alt="Appointment 3">
+                    <p><strong>Little Flower Ashram, Labbakkada</strong></p>
+                    <p><i>Assist Vocation Promoter</i></p>
+                    <p>06.07.2006- 17.05.2007</p>
+                </div>
+                <div class="appointment-tile">
+                    <img src="./assets/images/labbakada.jpg" alt="Appointment 3">
+                    <p><strong>Little Flower Ashram J.P.M College, Labbakkada</strong></p>
+                    <p><i>Procurator/ Bursar</i></p>
+                    <p>20.03.2006- 17.05.2017</p>
+                </div>
+                <div class="appointment-tile">
+                    <img src="./assets/images/labbakada.jpg" alt="Appointment 3">
+                    <p><strong>Little Flower Ashram, Labbakkada</strong></p>
+                    <p><i>In charge of Construction Work</i></p>
+                    <p>01.06.2005- 19.03.2006</p>
+                </div>
+                <div class="appointment-tile">
+                    <img src="./assets/images/amballor.jpg" alt="Appointment 3">
+                    <p><strong>St Francis Assisi, Amballoor</strong></p>
+                    <p>Arch Dioces of Eranakulam</p>
+                    <p><i>Assist. Vicar</i></p>
+                    <p>31.01.2005- 31.05.2005</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:jputhoorcst@gmail.com" target="_blank" class="icon">jputhoorcst@gmail.com</a></p>
+            <p>Phone: <a href="tel:++49 20366881965" class="icon">+49 20366881965</a></p>
+            <p>Mob No: <a href="tel:++49 1786683915" class="icon">+49 1786683915</a></p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Pater Dr. Joseph Puthoor CST. All Rights Reserved.</p>
+        <p><i><small>Designed and Developed by <a href="https://www.linkedin.com/in/jitto-thomas-aa88a81a1/" style="color: white;">Jitto Thomas</a></small></i></p>
+    </footer>
+</body>
+</html>
